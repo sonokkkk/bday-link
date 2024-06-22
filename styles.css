@@ -5,10 +5,12 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #ffe6f0;
-    background-image: url('https://www.example.com/pink-floral-background.jpg'); /* Replace with your image URL */
-    background-size: cover;
+    background-image: url('./floralbg.png'); /* Replace with your image file name */
+    background-size: cover; /* Ensures the image covers the entire background */
     background-repeat: no-repeat;
+    background-position: center; /* Centers the background image */
 }
+
 
 .birthday-box {
     background: rgba(255, 255, 255, 0.8);
