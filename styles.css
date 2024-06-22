@@ -1,16 +1,26 @@
+/* Define @font-face for your custom font */
+@font-face {
+    font-family: 'Lostar';
+    src: url('./fonts/Lostar.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply the custom font to elements */
 body {
+    font-family: 'Lostar', sans-serif; /* Apply the custom font with a fallback to sans-serif */
+    /* Other styles */
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #ffe6f0;
-    background-image: url('https://raw.githubusercontent.com/sonokkkk/bday-link/main/floralbg.png');
+    background-image: url('./your-image-file.jpg'); /* Replace with your image file name */
     background-size: cover; /* Ensures the image covers the entire background */
     background-repeat: no-repeat;
     background-position: center; /* Centers the background image */
 }
-
 
 .birthday-box {
     background: rgba(255, 255, 255, 0.8);
@@ -22,6 +32,9 @@ body {
 
 .birthday-box h1 {
     color: #ff66b2;
+    font-family: 'Lostar', sans-serif; /* Apply the custom font to the birthday heading */
+    font-size: 36px; /* Adjust font size as needed */
+    font-weight: normal; /* Adjust font weight as needed */
 }
 
 .buttons {
@@ -37,8 +50,10 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    font-family: 'Lostar', sans-serif; /* Apply the custom font to buttons */
 }
 
 .buttons button:hover {
     background-color: #ff3385;
 }
+
