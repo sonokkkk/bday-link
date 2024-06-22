@@ -16,7 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #ffe6f0;
-    background-image: url('./your-image-file.jpg'); /* Replace with your image file name */
+    background-image: url('./floralbg.png'); /* Replace with your image file name */
     background-size: cover; /* Ensures the image covers the entire background */
     background-repeat: no-repeat;
     background-position: center; /* Centers the background image */
