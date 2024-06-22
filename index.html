@@ -1,43 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Birthday Surprise!</title>
-  <link rel="stylesheet" href="styles.css">  </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-  <div class="birthday-box">
-    <h1>Happy Birthday!</h1>
-    <div class="buttons">
-      <button id="openGiftBtn">Open</button>
-      <button id="leavePageBtn">Leave (coward!)</button> </div>
-  </div>
+    <div class="birthday-box">
+        <h1>Happy Birthday!</h1>
+        <div class="buttons">
+            <button onclick="openGift()">Open</button>
+            <button onclick="leavePage()">Leave</button>
+        </div>
+    </div>
 
-  <img id="tulip" src="tulip.png" alt="Tulip Surprise!" class="hidden"> <div id="balloons" class="hidden"> </div>
+    <script>
+        function openGift() {
+            alert('Surprise! 🎉🎂');
+        }
 
-  <script>
-    const openGiftBtn = document.getElementById('openGiftBtn');
-    const leavePageBtn = document.getElementById('leavePageBtn');
-    const tulipImg = document.getElementById('tulip');
-    const balloonsDiv = document.getElementById('balloons');
-
-    openGiftBtn.addEventListener('click', () => {
-      tulipImg.classList.remove('hidden');
-      balloonsDiv.classList.remove('hidden');
-      // Add sound effects or animations for opening the gift (optional)
-    });
-
-    leavePageBtn.addEventListener('click', () => {
-      const funnyScenario = `
-        <p>Oh no! Where are you going? Don't you want to see the amazing surprise I have for you?   
-        Are you afraid of a little fun? Don't worry, it's not a prank... this time!   
-        Come on, click the "Open" button and let's celebrate!</p>
-      `;
-      const confirmation = confirm(funnyScenario);
-      if (!confirmation) {
-        window.close();
-      }
-    });
-  </script>
+        function leavePage() {
+            window.close();
+        }
+    </script>
 </body>
 </html>
