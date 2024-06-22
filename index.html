@@ -9,9 +9,9 @@
 <body>
     <div class="birthday-box">
         <h1>Happy Birthday!</h1>
-        <div class="buttons">
-            <button onclick="openGift()">Open</button>
-            <button onclick="leavePage()">Leave</button>
+        <div id="buttons-container" class="buttons-container">
+            <button id="open-btn" onclick="openGift()">Open</button>
+            <button id="leave-btn" onclick="moveLeaveButton()">Leave</button>
         </div>
     </div>
 
@@ -20,8 +20,23 @@
             alert('Surprise! 🎉🎂');
         }
 
-        function leavePage() {
-            window.close();
+        function moveLeaveButton() {
+            var leaveButton = document.getElementById('leave-btn');
+            var container = document.getElementById('buttons-container');
+
+            // Calculate random positions
+            var randomLeft = Math.random() * (window.innerWidth - 100); // Subtract button width
+            var randomTop = Math.random() * (window.innerHeight - 50); // Subtract button height
+
+            leaveButton.style.position = 'absolute';
+            leaveButton.style.left = randomLeft + 'px';
+            leaveButton.style.top = randomTop + 'px';
+
+            // Prevent page from closing
+            leaveButton.onclick = function() {
+                moveLeaveButton(); // Move button again on subsequent clicks
+                return false; // Prevent default action (closing page)
+            };
         }
     </script>
 </body>
