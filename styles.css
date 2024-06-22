@@ -1,7 +1,7 @@
 /* Define @font-face for your custom font */
 @font-face {
     font-family: 'Lostar';
-    src: url('./fonts/Lostar.ttf') format('truetype');
+    src: url('https://raw.githubusercontent.com/sonokkkk/bday-link/main/Fonts/Lostar.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -16,7 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #ffe6f0;
-    background-image: url('./floralbg.png'); /* Replace with your image file name */
+    background-image: url('https://raw.githubusercontent.com/sonokkkk/bday-link/main/floralbg.png');
     background-size: cover; /* Ensures the image covers the entire background */
     background-repeat: no-repeat;
     background-position: center; /* Centers the background image */
