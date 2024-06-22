@@ -15,6 +15,7 @@ body {
     font-family: 'Lostar', sans-serif;
 }
 
+
 h1 {
     font-size: 36px; /* Adjust font size as needed */
     color: #ff66b2;
@@ -36,20 +37,6 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
-.buttons button {
-    background-color: #ff66b2;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-family: 'Lostar', sans-serif; /* Apply the custom font to buttons */
-    font-weight: normal; 
-}
-
 .buttons-container {
     display: flex;
     justify-content: center;
@@ -64,7 +51,7 @@ h1 {
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Lostar', sans-serif; 
+    font-family: 'Lostar', sans-serif;
     font-size: 16px;
 }
 
@@ -96,7 +83,7 @@ h1 {
 .balloon {
     width: 50px;
     height: 100px;
-    background-image: url('https://raw.githubusercontent.com/sonokkkk/bday-link/main/redflower.png'); /* Replace with your image */
+    background-image: url('https://raw.githubusercontent.com/sonokkkk/bday-link/main/balloon.png'); /* Replace with your image */
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -113,4 +100,39 @@ h1 {
         opacity: 0;
         transform: translateY(100vh);
     }
+}
+
+.gift-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    cursor: pointer;
+    transition: opacity 1s, transform 1s;
+    opacity: 0;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.gift-box img {
+    width: 200px; /* Adjust size as needed */
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.gift-box .kitten {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.gift-box .kitten img {
+    width: 100px; /* Adjust size as needed */
+}
+
+.hidden {
+    display: none;
 }

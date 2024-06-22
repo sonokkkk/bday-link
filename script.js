@@ -15,7 +15,40 @@ function openGift() {
         balloon.style.animationDelay = Math.random() * 2 + 's';
         fallingElementsContainer.appendChild(balloon);
     }
+
+    // Show the closed gift box after a delay
+    const giftBox = document.getElementById('gift-box');
+    const giftBoxImg = document.getElementById('gift-box-closed');
+    giftBoxImg.src = 'https://raw.githubusercontent.com/sonokkkk/bday-link/main/gift-box-closed.png'; // URL for closed gift box image
+    giftBox.style.opacity = 1;
 }
+
+function openBox() {
+    const giftBox = document.getElementById('gift-box');
+    const giftBoxImg = document.getElementById('gift-box-closed');
+    const kitten = document.getElementById('kitten');
+
+    // Change to open gift box image
+    giftBoxImg.src = 'https://raw.githubusercontent.com/sonokkkk/bday-link/main/gift-box-opened.png'; // URL for open gift box image
+
+   
+
+
+
+    // Change to open gift box image
+    giftBoxImg.src = 'https://raw.githubusercontent.com/sonokkkk/bday-link/main/kitten.png'; // URL for open gift box image
+    
+    // Show the kitten after a delay
+    setTimeout(() => {
+        kitten.style.opacity = 1;
+    }, 0); // Adjust timing as needed
+
+    // Fade out the gift box
+    setTimeout(() => {
+        giftBox.style.opacity = 0;
+    }, 1500); // Adjust timing as needed
+}
+
 
 function moveLeaveButton() {
     var leaveButton = document.getElementById('leave-btn');
