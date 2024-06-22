@@ -1,26 +1,32 @@
-/* Define @font-face for your custom font */
 @font-face {
     font-family: 'Lostar';
-    src: url('https://raw.githubusercontent.com/sonokkkk/bday-link/main/Fonts/Lostar.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    src: url('https://raw.githubusercontent.com/sonokkkk/bday-link/main/Lostar.ttf') format('truetype');
 }
 
-/* Apply the custom font to elements */
 body {
-    font-family: 'Lostar', sans-serif; /* Apply the custom font with a fallback to sans-serif */
-    /* Other styles */
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffe6f0;
     background-image: url('https://raw.githubusercontent.com/sonokkkk/bday-link/main/floralbg.png');
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-repeat: no-repeat;
-    background-position: center; /* Centers the background image */
+    background-size: cover;
+    overflow: hidden; /* Prevent scrollbar from appearing */
+    font-family: 'Lostar', sans-serif;
 }
+
+h1 {
+    font-size: 36px; /* Adjust font size as needed */
+    color: #ff66b2;
+    margin: 0; /* Remove default margin */
+    line-height: 1.2; /* Adjust line height as needed */
+}
+
+/* Additional style to add some spacing between h1 and other elements if needed */
+.content h1 + h1 {
+    margin-top: 10px; /* Adjust the margin to decrease spacing between two h1 elements */
+}
+
 
 .birthday-box {
     background: rgba(255, 255, 255, 0.8);
@@ -30,16 +36,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.birthday-box h1 {
-    color: #ff66b2;
-    font-family: 'Lostar', sans-serif; /* Apply the custom font to the birthday heading */
-    font-size: 36px; /* Adjust font size as needed */
-    font-weight: normal; /* Adjust font weight as needed */
-}
-
-.buttons {
-    margin-top: 20px;
-}
 
 .buttons button {
     background-color: #ff66b2;
@@ -53,6 +49,7 @@ body {
     font-family: 'Lostar', sans-serif; /* Apply the custom font to buttons */
     font-weight: normal; 
 }
+
 .buttons-container {
     display: flex;
     justify-content: center;
@@ -67,12 +64,53 @@ body {
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Lostar', sans-serif; 
     font-size: 16px;
-    font-family: 'Lostar', sans-serif; /* Apply the custom font to buttons */
-    font-weight: normal;
 }
 
-.buttons button:hover {
-    background-color: #ff3385;
+#falling-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to pass through */
+    overflow: hidden;
 }
 
+.flower, .balloon {
+    position: absolute;
+    top: -100px; /* Start above the screen */
+    opacity: 1;
+    animation: fall 5s linear forwards;
+}
+
+.flower {
+    width: 50px;
+    height: 50px;
+    background-image: url('https://raw.githubusercontent.com/sonokkkk/bday-link/main/redflower.png'); /* Replace with your image */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.balloon {
+    width: 50px;
+    height: 100px;
+    background-image: url('https://raw.githubusercontent.com/sonokkkk/bday-link/main/redflower.png'); /* Replace with your image */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@keyframes fall {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100vh);
+    }
+}
