@@ -51,6 +51,7 @@ body {
     cursor: pointer;
     font-size: 16px;
     font-family: 'Lostar', sans-serif; /* Apply the custom font to buttons */
+    font-weight: normal; 
 }
 .buttons-container {
     display: flex;
@@ -67,6 +68,8 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    font-family: 'Lostar', sans-serif; /* Apply the custom font to buttons */
+    font-weight: normal;
 }
 
 .buttons button:hover {
