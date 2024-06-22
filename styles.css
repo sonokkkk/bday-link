@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #ffe6f0;
-    background-image: url('floralbg.png');
+    background-image: url('https://raw.githubusercontent.com/sonokkkk/bday-link/main/floralbg.png');
     background-size: cover; /* Ensures the image covers the entire background */
     background-repeat: no-repeat;
     background-position: center; /* Centers the background image */
